@@ -1,4 +1,12 @@
 // require inquirer
+const inquirer = require('inquirer');
+
+const fs = require('fs');
+
+const jest = require('jest')
+
+
+
 
 // Create an empty array List to store employee objects
 
