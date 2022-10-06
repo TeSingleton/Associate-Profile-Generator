@@ -8,9 +8,9 @@ describe("Engineer", () => {
         "111011",
         "worksingletonmcdaniel@gmail.com"
       );
-      const employeeRoll = engineer.getRole();
+      const employeeRole = engineer.getRole();
 
-      expect(employeeRoll).toEqual("Engineer");
+      expect(employeeRole).toEqual("Engineer");
     });
   });
 

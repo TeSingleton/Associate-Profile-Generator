@@ -1,42 +1,34 @@
 // require inquirer
-const inquirer = require('inquirer');
-
-const fs = require('fs');
-
-const jest = require('jest')
-
-
-
+const inquirer = require("inquirer");
+// file system
+const fs = require("fs");
+// jest for testing
+const jest = require("jest");
 
 // Create an empty array List to store employee objects
-
+const employee = [];
 // gather Manager data
 
-        // inquirer .prompt()
+// inquirer .prompt()
 
-          // Then build a Manager object
+// Then build a Manager object
 
 //Gather Engineer data
-    
-    // inquirer .prompt()
 
-    // Then build a Engineer object
+// inquirer .prompt()
+
+// Then build a Engineer object
 
 //Gather Intern data
 
-    // inquirer .prompt()
+// inquirer .prompt()
 
-    // Then build a Intern object
-
-
+// Then build a Intern object
 
 //Ask for "which team member they want to add next" or "are they done?"
 
-       // inquirer .prompt()
+// inquirer .prompt()
 
-       //    Then deciding which function then call
+//    Then deciding which function then call
 
-      // generate the HTML and write it to a file 
-
-
-
+// generate the HTML and write it to a file
