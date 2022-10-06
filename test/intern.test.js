@@ -1,58 +1,73 @@
-const Intern = require("../lib/intern")
+const Intern = require("../lib/intern");
 
-describe("Intern",()=>{
+describe("Intern", () => {
+  describe("getRole", () => {
+    it("should pass through the entered name when getName is called", () => {
+      const intern = new Intern(
+        "Svante",
+        "111011",
+        "worksingletonmcdaniel@gmail.com"
+      );
 
-    describe("getRole",()=>{
-        it("should pass through the entered name when getName is called",()=>{
-    
-            const intern =new Intern ("Svante","111011","worksingletonmcdaniel@gmail.com")
-    
-            const internRole = intern.getRole();
-    
-            expect(internRole).toEqual("Intern")
+      const internRole = intern.getRole();
 
-    })
-    })
+      expect(internRole).toEqual("Intern");
+    });
+  });
 
-    describe("getName",()=>{
-        it("should pass the ID when getID is called",()=>{
+  describe("getName", () => {
+    it("should pass the ID when getID is called", () => {
+      const intern = new Intern(
+        "Svante",
+        "111011",
+        "worksingletonmcdaniel@gmail.com"
+      );
 
-            const intern = new Intern("Svante" ,"111011","worksingletonmcdaniel@gmail.com")
+      const interName = intern.getName();
 
-            const interName = intern.getName();
+      expect(interName).toEqual("Svante");
+    });
+  });
 
-            expect(interName).toEqual("Svante")
-        })
-    })
+  describe("getID", () => {
+    it("should pass through the stored ID when getID is called", () => {
+      const intern = new Intern(
+        "Svante",
+        "111011",
+        "worksingletonmcdaniel@gmail.com"
+      );
 
-    describe("getID",()=>{
-        it("should pass through the stored ID when getID is called",()=>{
+      const internID = intern.getID();
 
-            const intern = new Intern("Svante","111011","worksingletonmcdaniel@gmail.com")
+      expect(internID).toEqual("111011");
+    });
+  });
 
-            const internID = intern.getID();
+  describe("getEmail", () => {
+    it("should pass through the stored email when the getEmail method is called", () => {
+      const intern = new Intern(
+        "Svante",
+        "111011",
+        "worksingletonmcdaniel@gmail.com"
+      );
 
-            expect(internID).toEqual("111011")
-        })
-    })
+      const internEmail = intern.getEmail();
 
-    describe("getEmail",()=>{
-        it("should pass through the stored email when the getEmail method is called",()=>{
-            const intern = new Intern("Svante","111011","worksingletonmcdaniel@gmail.com")
+      expect(internEmail).toEqual("worksingletonmcdaniel@gmail.com");
+    });
+  });
 
-            const internEmail = intern.getEmail();
+  describe("getSchool", () => {
+    it("should pass through the stored email when method getSchool is called", () => {
+      const intern = new Intern(
+        "Svante",
+        "111011",
+        "worksingletonmcdaniel@gmail.com"
+      );
 
-            expect(internEmail).toEqual("worksingletonmcdaniel@gmail.com")
-        })
-    })
+      const internSchool = intern.getSchool();
 
-    describe("getSchool",()=>{
-        it("should pass through the stored email when method getSchool is called",()=>{
-            const intern = new Intern("Svante","111011","worksingletonmcdaniel@gmail.com")
-
-            const internSchool = intern.getSchool();
-
-            expect(internSchool).toEqual("UNLV")
-        })
-    })
-})
+      expect(internSchool).toEqual("UNLV");
+    });
+  });
+});
