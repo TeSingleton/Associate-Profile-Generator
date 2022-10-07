@@ -1,16 +1,16 @@
-const Engineer = require("../lib/employee");
+const Engineer = require("../lib/engineer");
 
 describe("Engineer", () => {
   describe("getRole", () => {
-    it("should pass thriugh the name inputted when get name is called", () => {
+    it("should pass through the name inputted when get name is called", () => {
       const engineer = new Engineer(
         "Svante",
         "111011",
         "worksingletonmcdaniel@gmail.com"
       );
-      const employeeRole = engineer.getRole();
+      const engineerRole = engineer.getRole();
 
-      expect(employeeRole).toEqual("Engineer");
+      expect(engineerRole).toEqual("Engineer");
     });
   });
 
@@ -22,9 +22,9 @@ describe("Engineer", () => {
         "worksingletonmcdaniel@gmail.com"
       );
 
-      const employeeName = engineer.getName();
+      const engineerName = engineer.getName();
 
-      expect(employeeName).toEqual("Svante");
+      expect(engineerName).toEqual("Svante");
     });
   });
 
