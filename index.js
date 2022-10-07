@@ -13,6 +13,9 @@ const Intern = require('./lib/intern')
 const managerQuestions = require('./lib/managerQuestions')
 const engineerQuestions = require('./lib/engineerQuestions')
 const internQuestions = require('./lib/internQuestions')
+
+//menu items
+const menuItems =require('./lib/menuItems')
 // todo insertHTML template here when complete 
 // Create an empty array List to store employee objects
 const employees  = [];
@@ -36,11 +39,26 @@ async function getManagerInfo(){
 }
 
 async function menu(){
-    try {
+    try{
         const answers = await inquirer
-        .prompt([])
+        .prompt(menuItems)
+        if(answers.next ==="Engineer"){
+            getEngineerInfo()
+        }
+        else if(answers.next === "Intern"){
+            getInternInfo()
+        }
+        else if(answers.next === "Done"){
+            console.log(employees)
+
+            fs.writeFile('./dist/employees.HTML',HTMLTemplate(employees),(err)=> err? console.error(err):console.log('Employee HTML is ready to view'))
+        }
+    } 
+    catch(error){
+        console.log(error);
     }
 }
+
 
 
 
