@@ -35,6 +35,12 @@ async function getManagerInfo(){
     }
 }
 
+async function menu(){
+    try {
+        const answers = await inquirer
+        .prompt([])
+    }
+}
 
 
 
