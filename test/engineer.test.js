@@ -58,11 +58,12 @@ describe("Engineer", () => {
       const engineer = new Engineer(
         "Svante",
         "111011",
-        "worksingletonmcdaniel@gmail.com"
+        "worksingletonmcdaniel@gmail.com",
+        "TeSingleton"
       );
       const engineerGhub = engineer.getGithub();
 
-      expect(engineerGhub).toEqual("worksingletonmcdaniel@gmail.com");
+      expect(engineerGhub).toEqual("TeSingleton");
     });
   });
 });

@@ -17,7 +17,7 @@ describe("Intern", () => {
   describe("getName", () => {
     it("should pass the ID when getID is called ", () => {
       const manager = new Manager(
-        " Svante",
+        "Svante",
         "111011",
         "worksingletonmcdaniel@gmail.com"
       );
@@ -43,17 +43,24 @@ describe("Intern", () => {
 
   describe("getEmail", () => {
     it("should pass through the stored email when the getEmail method is called ", () => {
+      const manager = new Manager(
+        "Svante",
+        "111011",
+        "worksingletonmcdaniel@gmail.com"
+      );
       const managerEmail = manager.getEmail();
 
-      expect(managerEmail).toEqual("111011");
+      expect(managerEmail).toEqual("worksingletonmcdaniel@gmail.com");
     });
   });
+
   describe("getOfficeNumber", () => {
     it("should pass through the stored email when the getOfficeNumber method is called", () => {
       const manager = new Manager(
         "Svante",
         "111011",
-        "worksingletonmcdaniel@gmail.com"
+        "worksingletonmcdaniel@gmail.com",
+        "281-330-8004"
       );
       const managerPhone = manager.getOfficeNumber();
 

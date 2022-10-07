@@ -62,7 +62,8 @@ describe("Intern", () => {
       const intern = new Intern(
         "Svante",
         "111011",
-        "worksingletonmcdaniel@gmail.com"
+        "worksingletonmcdaniel@gmail.com",
+        "UNLV"
       );
 
       const internSchool = intern.getSchool();
