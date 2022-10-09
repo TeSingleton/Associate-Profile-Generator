@@ -49,7 +49,7 @@ async function menu() {
     } else if (answers.next === "Done") {
       console.log(employees);
       // generate the HTML and write it to a file
-      fs.writeFile("./dist/employees.HTML", HTMLTemplate(employees), (err) =>
+      fs.writeFile("./dist/employees.HTML", templateHTML(employees), (err) =>
         err ? console.error(err) : console.log("Employee HTML is ready to view")
       );
     }
