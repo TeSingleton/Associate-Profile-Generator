@@ -47,6 +47,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     Any inquiries , feel free to reach out
 
+  ## Screen Capture Demo 
+  
+  https://user-images.githubusercontent.com/104960721/194743210-f70743e7-039a-4702-b673-acdad72d8763.mp4
+
+  You may also view Screen Capture on Youtube
+  https://youtu.be/K0EjXVZxi9s
+
   GitHub : <a href="https://github.com/TeSingleton">TeSingleton</a>
 
   Email:  <a href="mailto:worksingletonmcdaniel@gmail.com">worksingletonmcdaniel@gmail.com</a>
