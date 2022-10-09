@@ -48,7 +48,7 @@ function renderTitle(employees) {
   } //if employee.getRole === Engineer
   // return github
   else if (employees.getRole() === "Engineer") {
-    return `GitHub <a "href=https://github.com/${employees.getGithub()}" target="_blank" >${employees.getGithub()}</a>`;
+    return `GitHub <a href="https://github.com/${employees.getGithub()}" target="_blank" >${employees.getGithub()}</a>`;
   } // if employee,getRole === intern
   // return school
   else if (employees.getRole() === "Intern") {
@@ -62,12 +62,10 @@ function renderTeamCards(employees) {
   // then push
   for (let i = 0; i < employees.length; i++) {
     let employeeInfo = `  <div class="card_container">
-        <div class="flip-card">
+        <div class="flip-card"><u>
          ${
            employees[i].name
-         }&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${employees[
-      i
-    ].getRole()}
+         }</u>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>${employees[i].getRole()}</u>
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img
@@ -78,7 +76,9 @@ function renderTeamCards(employees) {
             </div>
             <div class="flip-card-back">
               <p>ID#: ${employees[i].id}</p>
-              <p>Email:<a href="mailto:${employees[i].email}">${employees[i].email}</a></p>
+              <p>Email:<a href="mailto:${employees[i].email}">${
+      employees[i].email
+    }</a></p>
               <p>${renderTitle(employees[i])}</p>
               
             </div>
