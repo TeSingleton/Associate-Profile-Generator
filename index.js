@@ -103,3 +103,6 @@ async function getInternInfo() {
 }
 
 getManagerInfo();
+
+// *Dont Play for Perfect, Just Play
+// *If you do Right, You'll do Better.
