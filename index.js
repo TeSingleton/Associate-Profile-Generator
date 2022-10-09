@@ -16,7 +16,7 @@ const internQuestions = require("./lib/internQuestions");
 
 //menu items
 const menuItems = require("./lib/menuItems");
-// todo insertHTML template here when complete
+const templateHTML = require("./src/generateTeamHTML");
 // Create an empty array List to store employee objects
 const employees = [];
 // gather Manager data
@@ -91,7 +91,7 @@ async function getInternInfo() {
       answers.name,
       answers.id,
       answers.email,
-      answers.github
+      answers.school
     );
     console.log(answers);
     employees.push(intern);

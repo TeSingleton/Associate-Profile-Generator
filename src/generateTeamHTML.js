@@ -40,7 +40,7 @@ function templateHTML(employees) {
   // create template literal for the employees to be appended to
 }
 
-function renderTitle() {
+function renderTitle(employees) {
   //  if employees.getRole === Manager
   // return  phone number
   if (employees.getRole() === "Manager") {
@@ -48,11 +48,11 @@ function renderTitle() {
   } //if employee.getRole === Engineer
   // return github
   else if (employees.getRole() === "Engineer") {
-    return `GitHub <a "href=https://github.com/${employees.getGethub()}" target="_blank" >${employees.getGithub()}</a>`;
+    return `GitHub <a "href=https://github.com/${employees.getGithub()}" target="_blank" >${employees.getGithub()}</a>`;
   } // if employee,getRole === intern
   // return school
   else if (employees.getRole() === "Intern") {
-    return `School:${employees.getSchool}`;
+    return `School:${employees.getSchool()}`;
   }
 }
 
@@ -60,4 +60,34 @@ function renderTeamCards(employees) {
   // loop through the employees array.length
   // initialize a variable with a template literal
   // then push
+  for (let i = 0; i < employees.length; i++) {
+    let employeeInfo = `  <div class="card_container">
+        <div class="flip-card">
+         ${
+           employees[i].name
+         }&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${employees[
+      i
+    ].getRole()}
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                src="../assets/placeholder_images/cool-anonymous-profile-pictures-15.webp"
+                alt="placeholder"
+                style="width: 300px; height: 200px"
+              />
+            </div>
+            <div class="flip-card-back">
+              <p>ID#: ${employees[i].id}</p>
+              <p>Email:${employees[i].email}</p>
+              <p>${renderTitle(employees[i])}</p>
+              
+            </div>
+          </div>
+        </div>`;
+
+    teamCardsArray.push(employeeInfo);
+  }
+  return;
 }
+
+module.exports = templateHTML;
