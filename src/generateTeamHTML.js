@@ -78,7 +78,7 @@ function renderTeamCards(employees) {
             </div>
             <div class="flip-card-back">
               <p>ID#: ${employees[i].id}</p>
-              <p>Email:${employees[i].email}</p>
+              <p>Email:<a href="mailto:${employees[i].email}">${employees[i].email}</a></p>
               <p>${renderTitle(employees[i])}</p>
               
             </div>
